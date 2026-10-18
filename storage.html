@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HeliXVault — DNA Storage</title>
+<link rel="stylesheet" href="storage.css">
+</head>
+<body>
+<div class="screen">
+  <video class="dna-video" autoplay muted loop playsinline>
+    <source src="dna.mp4" type="video/mp4">
+  </video>
+  <div class="shade"></div>
+  <div class="top"><div class="logo">HeliX<span>Vault</span></div><div class="tag">DNA DATA ARCHIVAL SYSTEM</div></div>
+  <div class="floating-binary" id="floatingBinary"></div>
+  <div class="data-card left-card">
+    <div class="label">DIGITAL DATA</div><div class="filename" id="name">Loading...</div>
+    <div class="small" id="size"></div><div class="small" id="type"></div>
+    <div class="mini-title">BINARY</div><pre id="binary">...</pre>
+  </div>
+  <div class="center-info">
+    <div class="pill">DATA → DNA</div>
+    <div class="status-text" id="statusText">CONVERTING DIGITAL DATA</div>
+    <div class="progress"><i id="fill"></i></div><b id="percent">0%</b>
+  </div>
+  <div class="data-card right-card">
+    <div class="label">DNA SEQUENCE</div><pre id="dna">A C G T</pre>
+    <div class="map"><span>00</span> → A &nbsp; <span>01</span> → C &nbsp; <span>10</span> → G &nbsp; <span>11</span> → T</div>
+  </div>
+  <div class="back" onclick="location.href='index.html'">← Back</div>
+</div>
+<script src="storage.js"></script>
+</body>
+</html>
+
+<div class="data-card left-card">
+
+    <div class="label">DIGITAL DATA</div>
+
+    <div class="filename" id="name">
+        Loading...
+    </div>
+
+    <div class="small" id="size"></div>
+
+    <div class="small" id="type"></div>
+
+    <div class="mini-title">
+        SHA-256
+    </div>
+
+    <pre id="hash">...</pre>
+
+    <div class="mini-title">
+        BINARY
+    </div>
+
+    <pre id="binary">...</pre>
+
+</div>
+
+<div class="data-card analysis-card">
+
+    <div class="label">
+        DNA ANALYSIS
+    </div>
+
+    <div class="metric">
+        <span>DNA Length</span>
+        <b id="dnaLength">--</b>
+    </div>
+
+    <div class="metric">
+        <span>GC Content</span>
+        <b id="gcContent">--</b>
+    </div>
+
+    <div class="metric">
+        <span>Longest Homopolymer</span>
+        <b id="homopolymer">--</b>
+    </div>
+
+    <div class="mini-title">
+        MAPPING
+    </div>
+
+    <div class="map">
+        <span>00</span> → A<br>
+        <span>01</span> → C<br>
+        <span>10</span> → G<br>
+        <span>11</span> → T
+    </div>
+
+</div>

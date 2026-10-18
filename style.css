@@ -1,0 +1,421 @@
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    width:100%;
+    height:100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#020511;
+    color:#fff;
+}
+
+body{
+    overflow:hidden;
+}
+
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.home{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 60% 50%,
+            #071a2b 0%,
+            #020511 55%,
+            #010208 100%
+        );
+}
+
+
+/* =========================================
+   HELIXVAULT
+   LEFT SIDE
+   ========================================= */
+
+header{
+    position:absolute;
+
+    left:7%;
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index:10;
+}
+
+.logo{
+    margin:0;
+
+    font-weight:900;
+
+    font-size:90px;
+
+    line-height:1;
+
+    letter-spacing:10px;
+
+    white-space:nowrap;
+
+    color:#4cecff;
+
+    text-shadow:
+        0 0 18px #20dfff,
+        0 0 40px rgba(32,223,255,.45),
+        0 0 75px rgba(32,223,255,.20);
+}
+
+.logo span{
+    color:#e84dff;
+
+    text-shadow:
+        0 0 18px #e84dff,
+        0 0 40px rgba(232,77,255,.40),
+        0 0 75px rgba(232,77,255,.20);
+}
+
+
+/* =========================================
+   HOME MAIN
+   ========================================= */
+
+.home-main{
+    position:relative;
+
+    width:100%;
+    height:100%;
+}
+
+
+/* =========================================
+   RECTANGLE IMAGE
+   RIGHT SIDE
+   ========================================= */
+
+.hero-dna{
+    position:absolute;
+
+    right:4%;
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    width:53vw;
+    height:80vh;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(35,225,255,.25)
+        )
+        drop-shadow(
+            0 0 50px
+            rgba(235,61,255,.18)
+        );
+
+    z-index:3;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+   ========================================= */
+
+.upload-btn{
+    position:absolute;
+
+    left:25%;
+
+    bottom:14%;
+
+    transform:
+        translateX(-50%);
+
+    cursor:pointer;
+
+    padding:16px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #386dff,
+            #c33be8
+        );
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    box-shadow:
+        0 0 25px
+        rgba(116,76,255,.55);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.upload-btn:hover{
+    transform:
+        translateX(-50%)
+        translateY(-3px);
+
+    box-shadow:
+        0 0 40px
+        rgba(116,76,255,.85);
+}
+
+.upload-btn:active{
+    transform:
+        translateX(-50%)
+        scale(.97);
+}
+
+
+/* =========================================
+   STATUS TEXT
+   ========================================= */
+
+#status{
+    position:absolute;
+
+    left:25%;
+
+    bottom:9%;
+
+    transform:
+        translateX(-50%);
+
+    min-height:18px;
+
+    color:#8fa5c5;
+
+    font-size:14px;
+
+    text-align:center;
+
+    z-index:10;
+}
+
+
+/* =========================================
+   SMALL GLOW BEHIND IMAGE
+   ========================================= */
+
+.home::after{
+    content:"";
+
+    position:absolute;
+
+    width:45vw;
+    height:45vw;
+
+    right:7%;
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(35,225,255,.08),
+            transparent 65%
+        );
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media(max-width:1100px){
+
+    header{
+        left:5%;
+    }
+
+    .logo{
+        font-size:68px;
+
+        letter-spacing:8px;
+    }
+
+    .hero-dna{
+        right:2%;
+
+        width:55vw;
+        height:75vh;
+    }
+
+    .upload-btn{
+        left:24%;
+
+        bottom:13%;
+    }
+
+    #status{
+        left:24%;
+
+        bottom:8%;
+    }
+}
+
+
+/* =========================================
+   SMALL LAPTOP / TABLET
+   ========================================= */
+
+@media(max-width:900px){
+
+    header{
+        left:4%;
+    }
+
+    .logo{
+        font-size:55px;
+
+        letter-spacing:6px;
+    }
+
+    .hero-dna{
+        right:1%;
+
+        width:56vw;
+        height:70vh;
+    }
+
+    .upload-btn{
+        left:22%;
+
+        padding:14px 30px;
+
+        font-size:15px;
+    }
+
+    #status{
+        left:22%;
+
+        font-size:12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media(max-width:700px){
+
+    header{
+        left:50%;
+        top:11%;
+
+        transform:
+            translateX(-50%);
+    }
+
+    .logo{
+        font-size:42px;
+
+        letter-spacing:5px;
+
+        text-align:center;
+    }
+
+    .hero-dna{
+        right:50%;
+        top:53%;
+
+        transform:
+            translate(50%,-50%);
+
+        width:88vw;
+        height:58vh;
+    }
+
+    .home::after{
+        width:90vw;
+        height:90vw;
+
+        right:5%;
+        top:53%;
+    }
+
+    .upload-btn{
+        left:50%;
+
+        bottom:8%;
+
+        padding:14px 28px;
+
+        font-size:15px;
+    }
+
+    #status{
+        left:50%;
+
+        bottom:3%;
+
+        font-size:12px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media(max-width:450px){
+
+    .logo{
+        font-size:34px;
+
+        letter-spacing:4px;
+    }
+
+    .hero-dna{
+        width:92vw;
+        height:52vh;
+    }
+
+    .upload-btn{
+        font-size:14px;
+
+        padding:13px 25px;
+    }
+}
